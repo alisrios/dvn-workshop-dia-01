@@ -13,8 +13,8 @@ variable "auth" {
   })
 
   default = {
-    assume_role_arn = "arn:aws:iam::654654554686:role/workshop-role"
-    region          = "us-west-1"
+    assume_role_arn = "arn:aws:iam::148761658767:role/assume-role-terraform"
+    region          = "us-east-1"
   }
 }
 
@@ -27,7 +27,7 @@ variable "remote_backend" {
   })
 
   default = {
-    s3_bucket                   = "workshop-s3-remote-backend-bucket"
+    s3_bucket                   = "alisrios-workshop-s3-remote-backend-bucket"
     dynamodb_table_name         = "workshop-s3-state-locking-table"
     dynamodb_table_billing_mode = "PAY_PER_REQUEST"
     dynamodb_table_hash_key     = "LockID"
